@@ -1,0 +1,19 @@
+{
+  "name": "emp-manage-app",
+  "version": "1.0.0",
+  "description": "Employee management system using node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "employee",
+    "devops"
+  ],
+  "author": "venkat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
