@@ -23,5 +23,10 @@ pipeline {
                 sh 'npm --version'
             }
         }
+        stage('check Date"){
+            steps {
+                sh 'date'
+            }
+        } 
     }
 }
