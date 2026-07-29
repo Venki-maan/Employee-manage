@@ -28,6 +28,7 @@ pipeline {
                 sh 'date'
             }
         }
+
         post {
 
            always {
