@@ -29,6 +29,12 @@ pipeline {
                 sh 'date'
             }
         }
+      
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t employee-app .'
+            }
+        }
 
     }
 
