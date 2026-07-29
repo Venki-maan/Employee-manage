@@ -27,6 +27,23 @@ pipeline {
             steps {
                 sh 'date'
             }
-        } 
+        }
+        post {
+
+           always {
+               echo 'Pipeline completed'
+           }
+
+           success {
+               echo 'Application build successful'
+           }
+  
+           failure {
+               echo 'Application build failed'
+           }
+
+        }
+ 
     }
 }
+ 
