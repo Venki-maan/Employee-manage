@@ -4,13 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git branch: 'master',
-                url: 'https://github.com/Venki-maan/Employee-manage.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -33,6 +26,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 sh 'docker build -t employee-app .'
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                sh 'docker stop employee-app || true'
+                sh 'docker rm employee-app || true'
+                sh 'docker run -d --name employee-app -p 3000:3000 employee-app'
             }
         }
 
