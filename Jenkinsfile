@@ -25,7 +25,7 @@ pipeline {
       
         stage('Docker Build') {
             steps {
-                sh 'docker build -t employee-app .'
+                sh 'docker build -t employee-app:${BUILD NUMBER} .'
             }
         }
 
@@ -56,3 +56,4 @@ pipeline {
     }
 
 }
+
