@@ -1,75 +1,126 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Asset Tracker System</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Tracker</title>
 
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
 
-    <h1>Asset Tracker Tracker</h1>
-
-    <hr>
+<header>
+    <h1>📦 Asset Tracker</h1>
 
     <nav>
-        <a href="/">Home</a> |
-        <a href="#">Assets</a> |
-        <a href="#">About</a> |
-        <a href="#">Contact</a>
+        <a href="/">Home</a>
+        <a href="/assets">Assets</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
     </nav>
+</header>
 
-    <hr>
+<section class="hero">
 
-    <h2>Welcome</h2>
+    <h2>Welcome to Asset Tracker</h2>
 
     <p>
-        Welcome to the Asset Tracker.
+        Manage, monitor and track all company assets
+        from one centralized platform.
     </p>
 
-    <button>Add Assets</button>
-    <button>View Assets</button>
+    <div class="buttons">
+        <a href="/add" class="btn">➕ Add Asset</a>
+        <a href="/assets" class="btn secondary">📋 View Assets</a>
+    </div>
 
-    <h2>Assets List</h2>
+</section>
 
-    <table border="1" cellpadding="10">
+<section class="cards">
 
-        <tr>
-            <th>Asset ID</th>
-            <th>Product Name</th>
-            <th>Serial No</th>
-            <th>Manufactured by</th>
-        </tr>
+    <div class="card">
+        <h3>Total Assets</h3>
+        <h1>103</h1>
+    </div>
 
-        <tr>
-            <td>101</td>
-            <td>Laptop-01</td>
-            <td>7898KKLI</td>
-            <td>Dell</td>
-        </tr>
+    <div class="card">
+        <h3>Manufacturers</h3>
+        <h1>8</h1>
+    </div>
 
-        <tr>
-            <td>102</td>
-            <td>Apple Ipad</td>
-            <td>4566JKU</td>
-            <td>Apple</td>
-        </tr>
+    <div class="card">
+        <h3>Available</h3>
+        <h1>95</h1>
+    </div>
 
-        <tr>
-            <td>103</td>
-            <td>Poweredge Server</td>
-            <td>7532FVD</td>
-            <td>Dell</td>
-        </tr>
+</section>
 
-    </table>
+<section class="table-section">
 
-    <hr>
+<h2>Asset Inventory</h2>
 
-    <footer>
-        © 2026 Asset Tracker System
-    </footer>
+<input
+type="text"
+placeholder="🔍 Search Asset..."
+class="search">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Asset ID</th>
+<th>Product Name</th>
+<th>Serial No</th>
+<th>Manufacturer</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>101</td>
+<td>Laptop-01</td>
+<td>7898KKLI</td>
+<td>Dell</td>
+<td><span class="available">Available</span></td>
+<td>✏️ 🗑️</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Apple iPad</td>
+<td>4566JKU</td>
+<td>Apple</td>
+<td><span class="assigned">Assigned</span></td>
+<td>✏️ 🗑️</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>PowerEdge Server</td>
+<td>7532FVD</td>
+<td>Dell</td>
+<td><span class="maintenance">Maintenance</span></td>
+<td>✏️ 🗑️</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>© 2026 Asset Tracker | Developed by Venkat</p>
+
+</footer>
 
 </body>
-
 </html>
