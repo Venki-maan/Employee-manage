@@ -25,7 +25,7 @@ pipeline {
       
         stage('Docker Build') {
             steps {
-                sh 'docker build --no-cache -t employee-app .':${BUILD_NUMBER} .'
+                sh "docker build --no-cache -t employee-app:${BUILD_NUMBER} ."
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh 'docker stop employee-app || true'
                 sh 'docker rm employee-app || true'
-                sh 'docker run -d --name employee-app -p 3000:3000 employee-app'
+                sh "docker run -d --name employee-app -p 3000:3000 employee-app:${BUILD_NUMBER}"                
             }
         }
 
